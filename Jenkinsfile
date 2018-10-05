@@ -4,7 +4,7 @@ pipeline {
     stage ("Build") {
       steps {
         echo "Building..."
-         sh './gradlew build --no-daemon'
+         sh './gradlew build --no-daemon --debug'
          archiveArtifacts artifacts:build/test.jar
             }
                     }
